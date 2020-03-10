@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float appleDestroy = -50f;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (transform.position.y < appleDestroy)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
